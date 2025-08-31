@@ -55,30 +55,83 @@ Run frontend:
 npm start
 ```
 
+👉 With this setup, just upload a PDF or Image → extract → analyze → get insights instantly.
+
 ## 📊 Analysis Output
-When you upload a file (PDF, Image, or TXT) and click Analyze, the app extracts the text and provides the following insights:
 
-Sentiment → Overall tone (Positive / Negative / Neutral)
+# 1. "analysis"
 
-Emotions → List of detected emotions
+This is a short evaluation of the original post. It typically includes:
 
-Topics → Key themes discussed in the text
+Strengths – What’s already working in the post (e.g., clear announcement, engaging tone, product mention).
 
-Engagement Score → 1–10 rating of how engaging the content is
+Weaknesses – Areas that are weak or missing (e.g., lacks keywords, no CTA, low engagement potential).
 
-Suggestions → 3 short improvements to boost engagement
+Tone – Observations about whether the tone is formal, casual, persuasive, boring, etc.
 
-Audience → Best-fit target audience for the content
+Clarity – How easy it is to read and understand the post.
 
-Hashtags → Suggested hashtags for social sharing
+Engagement potential – How likely it is to get likes, shares, or comments.
 
-Rewrites → Same content rewritten in:
+SEO effectiveness – Whether the post includes relevant keywords, hashtags, or SEO-friendly phrasing.
+Example snippet:
+```
+"The post is brief and announces a new product, but it lacks specificity and excitement. Engagement potential is low due to absence of storytelling, benefits, or strong CTAs. SEO effectiveness is minimal."
+```
 
-Friendly (casual, Instagram-style)
+# 2. "recommendations"
 
-Professional (formal, LinkedIn-style)
+This provides specific, actionable advice to improve the post. It is broken down into categories:
 
-Concise (short, Twitter/X-style)
+keywords_hashtags – Suggested SEO keywords or hashtags to include for better search visibility and reach.
+
+calls_to_action (CTAs) – Phrases that encourage readers to take an action (e.g., “Shop now”, “Learn more”).
+
+formatting – Suggestions to make the post more readable and visually appealing (e.g., use lists, headings, line breaks).
+
+tone_adjustments – Advice on improving tone for better engagement (e.g., make it more energetic, humorous, persuasive, friendly).
+Example snippet:
+```
+{
+  "keywords_hashtags": ["#NewProduct", "#Launch", "#Innovation"],
+  "calls_to_action": ["Shop today", "Don't miss out!"],
+  "formatting": ["Use bullet points for key benefits", "Add line breaks"],
+  "tone_adjustments": "Make the tone more energetic and persuasive."
+}
+```
+
+#3. "rewrite"
+
+This is a fully polished, rewritten version of the original post, optimized for:
+
+Engagement – Catchy, attention-grabbing structure and tone.
+
+SEO – Includes suggested keywords and hashtags naturally.
+
+Readability – Clear formatting like bullet points, headings, line breaks.
+
+CTAs – Includes actionable phrases to drive conversions or interaction.
+
+Example snippet:
+```
+"🚀 Introducing our latest innovation: the Ultimate Smart Gadget!
+
+✨ Key Benefits:
+- Sleek design and top-notch performance
+- Easy to use and compatible with all devices
+- Perfect gift for tech enthusiasts
+
+Don't miss out — shop today and be among the first to experience the future of tech!
+
+#NewProduct #Launch #Innovation #MustHave #TechGadgets"
+```
+# ✅ Key Points About the Output:
+
+Actionable – You get both analysis and practical steps to improve the post.
+
+Ready-to-use – The rewrite can be posted as-is on social media.
+
+Structured – Helps separate evaluation, recommendations, and the final optimized post for easy display in your app (like PostCraft).
 
 ## 🗂️ Project Structure
 ```
@@ -117,4 +170,3 @@ Backend runs on Render using Docker (with Tesseract preinstalled).
 
 Frontend can be hosted on Netlify/Vercel and configured to call the Render backend.
 
-👉 With this setup, just upload a PDF or Image → extract → analyze → get insights instantly.
