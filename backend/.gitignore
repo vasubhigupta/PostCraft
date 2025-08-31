@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environments
+env5/
+venv/
+ENV/
+
+# Node.js
+node_modules/
+.pnp/
+.pnp.js
+
+# Environment files
+.env
+
+# Temp / misc
+tempCodeRunnerFile.py
