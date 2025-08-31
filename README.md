@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+📖 Postcraft
+Postcraft is a text extraction and analysis tool that allows users to upload PDFs or Images and get meaningful insights. The system extracts text using OCR (Tesseract) and PyMuPDF, analyzes it with Gemini, and returns structured insights — making document analysis smarter and faster.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✨ Features
+📂 Multi-format Support – Upload PDFs and Images.
+🔍 OCR Support – Extracts text from images using Tesseract OCR.
+📑 PDF Parsing – Extracts text from PDFs using PyMuPDF.
+🤖 AI-Powered Analysis – Uses Google Gemini API for summarization, insights, and keyword extraction.
+⚡ FastAPI Backend – REST APIs to handle file upload and text analysis.
+🎨 React Frontend – Simple UI to upload and analyze documents.
+🐳 Dockerized Deployment – Render-ready with Tesseract preinstalled.
+⚙️ Installation (Local Setup)
+1️⃣ Clone the Repository
+git clone https://github.com/vasubhigupta/PostCraft.git
+cd PostCraft
+2️⃣ Backend Setup (FastAPI)
+cd backend
+pip install -r requirements.txt
+🔑 Create a .env file in backend/ with:
 
-## Available Scripts
+GEMINI_API_KEY=your_google_gemini_api_key
+PORT=8000
+ENV=DEV
+Run backend:
 
-In the project directory, you can run:
+uvicorn main:app --reload --port 8000
+3️⃣ Frontend Setup (React)
+cd frontend
+npm install
+🔑 Create a .env file in frontend/ with:
 
-### `npm start`
+REACT_APP_ENV=DEV
+REACT_APP_DEVELOPMENT_URL=http://localhost:8000
+REACT_APP_PRODUCTION_URL=yourdomain
+Run frontend:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm start
+📊 Analysis Output
+When you upload a file (PDF, Image, or TXT) and click Analyze, the app extracts the text and provides the following insights:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Sentiment → Overall tone (Positive / Negative / Neutral)
 
-### `npm test`
+Emotions → List of detected emotions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Topics → Key themes discussed in the text
 
-### `npm run build`
+Engagement Score → 1–10 rating of how engaging the content is
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Suggestions → 3 short improvements to boost engagement
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Audience → Best-fit target audience for the content
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Hashtags → Suggested hashtags for social sharing
 
-### `npm run eject`
+Rewrites → Same content rewritten in:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Friendly (casual, Instagram-style)
+Professional (formal, LinkedIn-style)
+Concise (short, Twitter/X-style)
+🗂️ Project Structure
+Based on your attached structure image:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+project-root/
+│── backend/
+│   ├── main.py                 # FastAPI entrypoint
+│   ├── endpoints/                    # API routers
+│   │   └── analyze.py          # AI model integrations
+│   ├── services/               # Business logic
+│   │   └── analyzer_service.py      
+│   │   └── file_utils.py       # File helpers (OCR, PDF parsing)
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+│── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── Homepage.js     # Upload & analyze component
+|   |   |   └──Homepage.css     #css for Homepage.js
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── public/
+│   └── package.json
+│
+└── README.md
+🛠️ Challenges Faced
+⚡ Tesseract Installation – While Tesseract OCR works fine locally, deploying on Render required custom Docker setup since pytesseract only provides Python bindings and does not install the binary itself. Solution: A Dockerfile was created to install tesseract-ocr in the container alongside Python dependencies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🌐 CORS Issues – Ensuring frontend (React) could communicate with backend (FastAPI) required setting correct CORS policies and environment-based URLs.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔑 Environment Management – Needed separate .env handling for development and production both in backend and frontend.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🚀 Deployment
+Backend runs on Render using Docker (with Tesseract preinstalled).
+Frontend can be hosted on Netlify/Vercel and configured to call the Render backend.
+👉 With this setup, just upload a PDF or Image → extract → analyze → get insights instantly.
