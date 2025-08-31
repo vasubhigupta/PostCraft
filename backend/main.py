@@ -9,7 +9,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://post-craft-sigma.vercel.app/, http://localhost:3000"],  
+    allow_origins=[
+        "https://post-craft-sigma.vercel.app",  # frontend deployed
+        "http://localhost:3000"                  # local frontend
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
