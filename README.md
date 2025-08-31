@@ -63,18 +63,18 @@ npm start
 
 This is a short evaluation of the original post. It typically includes:
 
-Strengths – What’s already working in the post (e.g., clear announcement, engaging tone, product mention).
+**Strengths** – What’s already working in the post (e.g., clear announcement, engaging tone, product mention).
 
-Weaknesses – Areas that are weak or missing (e.g., lacks keywords, no CTA, low engagement potential).
+**Weaknesses** – Areas that are weak or missing (e.g., lacks keywords, no CTA, low engagement potential).
 
-Tone – Observations about whether the tone is formal, casual, persuasive, boring, etc.
+**Tone** – Observations about whether the tone is formal, casual, persuasive, boring, etc.
 
-Clarity – How easy it is to read and understand the post.
+**Clarity** – How easy it is to read and understand the post.
 
-Engagement potential – How likely it is to get likes, shares, or comments.
+**Engagement potential** – How likely it is to get likes, shares, or comments.
 
-SEO effectiveness – Whether the post includes relevant keywords, hashtags, or SEO-friendly phrasing.
-Example snippet:
+**SEO effectiveness** – Whether the post includes relevant keywords, hashtags, or SEO-friendly phrasing.
+**Example snippet:**
 ```
 "The post is brief and announces a new product, but it lacks specificity and excitement. Engagement potential is low due to absence of storytelling, benefits, or strong CTAs. SEO effectiveness is minimal."
 ```
@@ -83,14 +83,14 @@ Example snippet:
 
 This provides specific, actionable advice to improve the post. It is broken down into categories:
 
-keywords_hashtags – Suggested SEO keywords or hashtags to include for better search visibility and reach.
+**keywords_hashtags –** Suggested SEO keywords or hashtags to include for better search visibility and reach.
 
-calls_to_action (CTAs) – Phrases that encourage readers to take an action (e.g., “Shop now”, “Learn more”).
+**calls_to_action (CTAs) –** Phrases that encourage readers to take an action (e.g., “Shop now”, “Learn more”).
 
-formatting – Suggestions to make the post more readable and visually appealing (e.g., use lists, headings, line breaks).
+**formatting –** Suggestions to make the post more readable and visually appealing (e.g., use lists, headings, line breaks).
 
-tone_adjustments – Advice on improving tone for better engagement (e.g., make it more energetic, humorous, persuasive, friendly).
-Example snippet:
+**tone_adjustments –** Advice on improving tone for better engagement (e.g., make it more energetic, humorous, persuasive, friendly).
+**Example snippet:**
 ```
 {
   "keywords_hashtags": ["#NewProduct", "#Launch", "#Innovation"],
@@ -100,19 +100,19 @@ Example snippet:
 }
 ```
 
-### 3. "rewrite"
+### 3. rewrite"
 
 This is a fully polished, rewritten version of the original post, optimized for:
 
-Engagement – Catchy, attention-grabbing structure and tone.
+**Engagement –** Catchy, attention-grabbing structure and tone.
 
-SEO – Includes suggested keywords and hashtags naturally.
+**SEO –** Includes suggested keywords and hashtags naturally.
 
-Readability – Clear formatting like bullet points, headings, line breaks.
+**Readability –** Clear formatting like bullet points, headings, line breaks.
 
-CTAs – Includes actionable phrases to drive conversions or interaction.
+**CTAs –** Includes actionable phrases to drive conversions or interaction.
 
-Example snippet:
+**Example snippet:**
 ```
 "🚀 Introducing our latest innovation: the Ultimate Smart Gadget!
 
@@ -127,11 +127,11 @@ Don't miss out — shop today and be among the first to experience the future of
 ```
 ## ✅ Key Points About the Output:
 
-Actionable – You get both analysis and practical steps to improve the post.
+**Actionable –** You get both analysis and practical steps to improve the post.
 
-Ready-to-use – The rewrite can be posted as-is on social media.
+**Ready-to-use –** The rewrite can be posted as-is on social media.
 
-Structured – Helps separate evaluation, recommendations, and the final optimized post for easy display in your app (like PostCraft).
+**Structured –** Helps separate evaluation, recommendations, and the final optimized post for easy display in your app (like PostCraft).
 
 ## 🗂️ Project Structure
 ```
