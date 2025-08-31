@@ -59,7 +59,7 @@ npm start
 
 ## 📊 Analysis Output
 
-# 1. "analysis"
+### 1. "analysis"
 
 This is a short evaluation of the original post. It typically includes:
 
@@ -79,7 +79,7 @@ Example snippet:
 "The post is brief and announces a new product, but it lacks specificity and excitement. Engagement potential is low due to absence of storytelling, benefits, or strong CTAs. SEO effectiveness is minimal."
 ```
 
-# 2. "recommendations"
+### 2. "recommendations"
 
 This provides specific, actionable advice to improve the post. It is broken down into categories:
 
@@ -100,7 +100,7 @@ Example snippet:
 }
 ```
 
-#3. "rewrite"
+### 3. "rewrite"
 
 This is a fully polished, rewritten version of the original post, optimized for:
 
@@ -125,7 +125,7 @@ Don't miss out — shop today and be among the first to experience the future of
 
 #NewProduct #Launch #Innovation #MustHave #TechGadgets"
 ```
-# ✅ Key Points About the Output:
+## ✅ Key Points About the Output:
 
 Actionable – You get both analysis and practical steps to improve the post.
 
