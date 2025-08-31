@@ -89,7 +89,7 @@ export default function Homepage() {
             formData.append("file", file);
 
             
-            const res = await fetch("https://postcraft-dlwk.onrender.com", {
+            const res = await fetch("https://postcraft-dlwk.onrender.com/analyze", {
                 method: "POST",
                 body: formData,
             });
